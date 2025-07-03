@@ -10,7 +10,7 @@ el diseño FrontEnd de este proyecto.
 # Comenzando🚀
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu local para propósitos de desarrollo y pruebas.
 
-git clone ()
+git clone (https://github.com/igiordano/Proyecto_UIOTEC_MVT_2025.git)
 
 # Descarga de instalación ZIP
 Ir a “code” > download ZIP
