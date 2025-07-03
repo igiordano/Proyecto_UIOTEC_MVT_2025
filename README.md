@@ -38,11 +38,11 @@ luego seguir con la instalacion del mismo.
 # construido con🛠️
  VS CODE
  PYTHON 3.10
- DB SQLITE BROWSER
+ DB SQLITE 
  Django
  HTML 5
- CSS
- BOOTSTRAPP
+ CSS 3
+
 
 # Comandos usados en la consola de VS CODE para hacer funcionar el proyecto
 python -m venv virtual (creamos el entorno virtual)
@@ -76,8 +76,8 @@ Creamos nuestro archivo urls.py (dentro de la app), creamos la url para la vista
 En nuestro archivo settings.py incluimos la app creada en INSTALLED_APPS, agregamos la dirección de la carpeta de nuestros templates en la sección DIRS, de templates. 
 Listo!
 
-## Créditos
 
 
-# Autor✒️
+
+## Autor✒️
 IGNACIO GIORDANO
