@@ -31,7 +31,7 @@ se elige el sistema operativo que usas Windows, Mac o Linux se descarga y se sig
 Luego se instala Python 3.10 se descarga de https://www.python.org/  en la primer pantalla selecionar la caja de path sera de utilidad para este proyecto y
 luego seguir con la instalacion del mismo.
 
- Descargue de aqui  DB SQLITE https://www.sqlite.org/index.html y siga los pasos.
+ DB SQLITE se instala cuando hacemos python manage.py migrate/ python manage.py makemigrations
 
 
 
@@ -55,9 +55,9 @@ cd .\Proyecto\   (nos posiciona en la carpeta del proyecto)
 
 python manage.py startapp MiApp (crea la app)
 
-python manage.py makemigrations (hace los cambios en la base de datos y los modelos)
+python manage.py makemigrations (hace los cambios en la base de datos y los modelos) 
 
-python manage.py migrate (Guarda los cambios de los modelos)
+python manage.py migrate (Guarda los cambios de los modelos)( se crea la base de datos)
 
 python manage.py runserver (activa el sitio web en localhost)
 
