@@ -47,7 +47,7 @@ luego seguir con la instalacion del mismo.
 # Comandos usados en la consola de VS CODE para hacer funcionar el proyecto
 python -m venv virtual (creamos el entorno virtual)
 
-.\virtual4\Scripts\activate (activación del entorno virtual)
+.\virtual\Scripts\activate (activación del entorno virtual)
 
 django-admin startproject Proyecto (crea el proyecto)
 
