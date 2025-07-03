@@ -1,0 +1,36 @@
+{% extends 'App/base.html' %}
+{% block title %}Buscar Venta por Cliente{% endblock %}
+{% block codigoDinamico %}
+<div class="container">
+    <h2>Buscar Ventas por Cliente</h2>
+    <form method="get">
+        <input type="text" name="cliente" placeholder="Nombre del cliente">
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+    <br>
+    {% if ventas %}
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for venta in ventas %}
+                <tr>
+                    <td>{{ venta.id }}</td>
+                    <td>{{ venta.cliente }}</td>
+                    <td>{{ venta.fecha }}</td>
+                    <td>{{ venta.total }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% elif respuesta %}
+        <p>{{ respuesta }}</p>
+    {% endif %}
+</div>
+{% endblock %}
