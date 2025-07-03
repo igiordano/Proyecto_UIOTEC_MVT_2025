@@ -1,6 +1,6 @@
 # Proyecto_UIOTEC_MVT_2025
 
-modelo de proyecto final
+#Modelo de proyecto final
 se desarrrollo una aplicación web  programada en Python en Django. Esta web tendrá admin, perfiles, registro, páginas y formularios.
 
 Este proyecto no utiliza Python puro sino Python con Django para desarrollo web. Y la magia de HTML5 Y CSS3 combinado  DJANGO HTML nos facilitan
