@@ -1,0 +1,35 @@
+from django.contrib import admin
+from django.urls import path
+from App import views
+
+urlpatterns = [
+    path('', views.mostrar_index, name='home'),
+    path('productos/', views.mostrar_productos, name='productos'),
+    path('productos/crear/', views.crear_producto, name='crear_producto'),
+    path('clientes/', views.mostrar_clientes, name='clientes'),
+    path('ventas/', views.mostrar_ventas, name='ventas'),
+    path('detalle-venta/', views.mostrar_detalle_venta, name='detalle_venta'),
+    path('clientes/crear/', views.crear_cliente, name='crear_cliente'),
+    path('ventas/crear/', views.crear_venta, name='crear_venta'),
+    path('detalle-venta/crear/', views.crear_detalle_venta, name='crear_detalle_venta'),
+    path('productos/buscar-marca/', views.buscar_marca_producto, name='buscar_marca_producto'),
+    path('clientes/buscar-apellido/', views.buscar_apellido_cliente, name='buscar_apellido_cliente'),
+    path('ventas/buscar-cliente/', views.buscar_cliente_venta, name='buscar_cliente_venta'),
+    path('detalle-venta/buscar-producto/', views.buscar_producto_detalle_venta, name='buscar_producto_detalle_venta'),
+    path('productos/eliminar/<int:producto_id>/', views.eliminar_producto, name='eliminar_producto'),
+    path('clientes/eliminar/<int:cliente_id>/', views.eliminar_cliente, name='eliminar_cliente'),
+    path('ventas/eliminar/<int:venta_id>/', views.eliminar_venta, name='eliminar_venta'),
+    path('detalle-venta/eliminar/<int:detalle_id>/', views.eliminar_detalle_venta, name='eliminar_detalle_venta'),
+    path('productos/actualizar/<int:producto_id>/', views.actualizar_producto, name='actualizar_producto'),
+    path('clientes/actualizar/<int:cliente_id>/', views.actualizar_cliente, name='actualizar_cliente'),
+    path('ventas/actualizar/<int:venta_id>/', views.actualizar_venta, name='actualizar_venta'),
+    path('detalle-venta/actualizar/<int:detalle_id>/', views.actualizar_detalle_venta, name='actualizar_detalle_venta'),
+    path('registro/', views.registro_usuario, name='registro_usuario'),
+    path('login/', views.login_request, name='login'),
+    path('logout/', views.logout_request, name='logout'),
+    path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
+    path('terms-conditions/', views.terms_conditions, name='terms_conditions'),
+    path('contacto/', views.contacto, name='contacto'),
+    path('gracias/', views.pagina_de_gracias, name='pagina_de_gracias'),
+    path('mensajes/', views.listar_mensajes, name='listar_mensajes'),
+]

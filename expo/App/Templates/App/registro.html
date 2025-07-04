@@ -1,0 +1,20 @@
+{% extends 'App/base.html' %}
+{% block title %}Registro de Usuario{% endblock %}
+{% block codigoDinamico %}
+<div class="container glassmorph">
+    <form action="" method="post">
+        {% csrf_token %}
+        <br><br><br>
+        <h1 style="text-align:center;">Registro de Usuario</h1>
+        <br><br><br>
+        <table style="margin:auto;">
+            {{ form.as_table }}
+        </table>
+        <br><br>
+       <div style="text-align: center; margin-top: 20px;">
+            <button type="submit" class="btn btn-success">Registrarse</button>
+            <a href="{% url 'home' %}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

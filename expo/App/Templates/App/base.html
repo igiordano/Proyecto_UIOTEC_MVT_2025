@@ -1,0 +1,80 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'App/styles.css' %}">
+    <link rel="icon" href="{% static 'App/favicon.ico' %}">
+    <title>{% block title %}  {% endblock title %}</title>
+</head>
+<body>
+    
+<nav class="navbar">
+        <div class="navbar-logo">
+            <a href="{% url 'home' %}">AlarmaSystem</a>
+        </div>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-icon">&#9776;</label>
+    <ul class="navbar-links">
+        <li><a href="{% url 'home' %}">Inicio</a></li>
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'productos' %}">Productos</a></li>
+        <li><a href="{% url 'clientes' %}">Clientes</a></li>
+        <li><a href="{% url 'ventas' %}">Ventas</a></li>
+        <li><a href="{% url 'detalle_venta' %}">Detalle de Ventas</a></li>
+        <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+        {% else %}
+            <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+            <li><a href="{% url 'registro_usuario' %}">Registrarse</a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+<div class="container">
+    {% if request.user.is_authenticated %}
+    <h2>¡Hola, {{ user.username }}!</h2>
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
+    {% else %}
+    <h2>No has iniciado sesión. <a href="{% url 'login' %}">Inicia sesión aquí</a></h2>
+    {% endif %}
+</div><br> <br> <br> <br>
+
+{% block codigoDinamico %}
+
+{% endblock codigoDinamico %}
+   <!-- Footer fijo abajo -->
+        <footer class="glassmorph-footer">
+            <div class="footer-column">
+                <h4>AlarmaSystem</h4>
+                <p>Encuentra las mejores alarmas para tu Hogar.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="{% url 'privacy_policy' %}">Política de Privacidad</a></li>
+                    <li><a href="{% url 'terms_conditions' %}">Términos y Condiciones</a></li>
+                </ul>
+                <p>&copy; <span id="currentYear"></span> AlarmaSystem</p>
+            </div>
+            <div class="footer-column">
+                <h4>Redes Sociales</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+</body>
+</html>

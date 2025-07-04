@@ -1,0 +1,18 @@
+{% extends 'App/base.html' %}
+{% block title %}Crear Producto{% endblock %}
+{% block codigoDinamico %}
+<div class="container glassmorph">
+    <form action="" method="post">
+        {% csrf_token %}
+        <h1 style="text-align:center;">Crear Producto</h1>
+        <table style="margin:auto;">
+            {{ form.as_table }}
+        </table>
+        <br><br>
+        <div style="text-align: center; margin-top: 20px;">
+            <button type="submit" class="btn btn-success">Crear Producto</button>
+            <a href="{% url 'productos' %}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

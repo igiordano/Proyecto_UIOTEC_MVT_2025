@@ -1,0 +1,18 @@
+{% extends 'App/base.html' %}
+{% block title %}Crear Cliente{% endblock %}
+{% block codigoDinamico %}
+<div class="container glassmorph">
+    <form action="" method="post">
+        {% csrf_token %}
+        <h1 style="text-align:center;">Crear Cliente</h1>
+        <table style="margin:auto;">
+            {{ form.as_table }}
+        </table>
+        <br><br>
+        <div style="text-align: center; margin-top: 20px;">
+            <button type="submit" class="btn btn-success">Crear Cliente</button>
+            <a href="{% url 'clientes' %}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
